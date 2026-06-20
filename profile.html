@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+    @import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+.frame {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 6px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: linear-gradient(to top right, #ff91af 0%, #c7637f 100%);
+  color: #c7637f;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: 75%;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 7px 4px 16px -9px #42445a;
+}
+
+.hero {
+  display: flex;
+  flex: 60%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+.hero .avatar {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+}
+.hero .avatar .circle-1 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 76px;
+  height: 76px;
+  top: -3px;
+  left: -3px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000 #000000 #000000 transparent;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.hero .avatar .circle-2 {
+  position: absolute;
+  box-sizing: border-box;
+  width: 82px;
+  height: 82px;
+  top: -6px;
+  left: -6px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #000000 transparent #000000 #000000;
+  border-radius: 50%;
+  transition: all 1.5s ease-in-out;
+}
+.hero .avatar img {
+  border-radius: 50%;
+  background: #f5e8df;
+}
+.hero .avatar:hover .circle-1 {
+  transform: rotate(360deg);
+}
+.hero .avatar:hover .circle-2 {
+  transform: rotate(-360deg);
+}
+.hero .title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #c7637f;
+}
+.hero .title .name {
+  font-size: 15px;
+  font-weight: 600;
+}
+.hero .title .role {
+  font-size: 11px;
+  line-height: 15px;
+}
+.hero .actions {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.hero .actions button {
+  margin-bottom: 12px;
+  color: #c7637f;
+  background: none;
+  border: 1px solid #c7637f;
+  border-radius: 15px;
+  width: 120px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+.hero .actions button:hover {
+  background: #e695ac;
+  color: #FFF;
+}
+.hero .actions button a {
+  color: #c7637f;
+  text-decoration: none;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 40%;
+}
+.statistics .card:not(:first-child) {
+  margin-top: 1px;
+}
+.statistics .card {
+  color: #000;
+  cursor: pointer;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #e695ac;
+  transition: all 0.3s ease-in-out;
+}
+.statistics .card:hover {
+  background: #ff91af;
+}
+.statistics .card .number {
+  font-size: 15px;
+  font-weight: 600;
+}
+.statistics .card .name {
+  font-size: 11px;
+  line-height: 15px;
+}
+</style>
+</head>
+<body>
+    <div class="frame">
+        <div class="container">
+            <div class="hero">
+                <div class="avatar">
+                    <div class="circle-1"></div>
+                    <div class="circle-2"></div>
+                    <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/011/540/original/Happy_Writing.jpeg?1624583692" width="70" height="70" alt="Jessica Potter">
+                </div>
+                <div class="title">
+                    <span class="name">Nikki Kes</span>
+                    <span class="role">Student</span>
+                </div>
+                <div class="actions">
+                    <button><a href="www.TikTok.com" target="_blank">Follow</a></button>
+                    <button><a href="www.Snapchat.com" target="_blank">Message</a></button>
+                </div>
+            </div>
+            <div class="statistics">
+                <div class="card posts">
+                    <span class="number">33</span>
+                    <span class="name">Posts</span>
+                </div>
+                <div class="card likes">
+                    <span class="number">1354</span>
+                    <span class="name">Likes</span>
+                </div>
+                <div class="card followers">
+                    <span class="number">570</span>
+                    <span class="name">Followers</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
