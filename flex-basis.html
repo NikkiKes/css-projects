@@ -3,25 +3,36 @@
 <head>
 <style>
 #main {
-  width: 300px;
-  height: 100px;
+  width: 600px;
+  height: 120px;
   border: 1px solid #c3c3c3;
   display: flex;
 }
 
-#main div {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 50px;
+/* 50px */
+.w50 {
+  flex: 0 0 50px;
+  background-color: #ff50f6;
 }
 
-#main div:nth-of-type(2) {
-  flex-basis: 100px;
+/* 100px */
+.w100 {
+  flex: 0 0 100px;
+  background-color: #ff9ad6;
 }
 
-#main div:nth-of-type(6) {
-  flex-basis: 150px;
+/* 150px */
+.w150 {
+  flex: 0 0 150px;
+  background-color: #ff50a0;
 }
+
+/* 200px */
+.w200 {
+  flex: 0 0 200px;
+  background-color: #ffb3e6;
+}
+
 </style>
 </head>
 <body>
@@ -29,17 +40,16 @@
 <h1>Flex-basis</h1>
 
 <div id="main">
-  <div style="background-color:#ff50f6;">50px</div>
-  <div style="background-color:pink;">100px</div>
-  <div style="background-color:#ff50f6;">50px</div>
-  <div style="background-color:pink;">50px</div>
-  <div style="background-color:#ff50f6;">50px</div>
-  <div style="background-color:pink;">150px</div>
-  <div style="background-color:#ff50f6;">50px</div>
-  <div style="background-color:pink;">50px</div>
-  <div style="background-color:#ff50f6;">50px</div>
-
+  <div class="w50">50px</div>
+  <div class="w100">100px</div>
+  <div class="w150">150px</div>
+  <div class="w200">200px</div>
+  <div class="w50">50px</div>
+  <div class="w100">100px</div>
+  <div class="w150">150px</div>
+  <div class="w200">200px</div>
 </div>
+
 
 </body>
 </html>
